@@ -535,9 +535,6 @@ conn.sdemote = lenguajeGB['smsSdemote']()
 conn.sDesc = lenguajeGB['smsSdesc']() 
 conn.sSubject = lenguajeGB['smsSsubject']() 
 conn.sIcon = lenguajeGB['smsSicon']() 
-conn.sSetstock = '*𝙎𝙀 𝙃𝘼 𝙀𝙎𝙏𝘼𝘽𝙇𝙀𝘾𝙄𝘿𝙊 𝘾𝙊𝙍𝙍𝙀𝘾𝙏𝘼𝙈𝙀𝙉𝙏𝙀 𝙀𝙇 𝙎𝙏𝙊𝘾𝙆 𝘿𝙀 𝙏𝙐𝙎 𝙑𝙀𝙉𝙏𝘼𝙎*'
-conn.sSetpagos = '*𝙎𝙀 𝙃𝘼 𝙀𝙎𝙏𝘼𝘽𝙇𝙀𝘾𝙄𝘿𝙊 𝘾𝙊𝙍𝙍𝙀𝘾𝙏𝘼𝙈𝙀𝙉𝙏𝙀 𝙏𝙐𝙎 𝙈𝙀𝙏𝙊𝘿𝙊𝙎 𝘿𝙀 𝙋𝘼𝙂𝙊*'
-conn.sSetreglas = '*𝙎𝙀 𝙃𝘼 𝙀𝙎𝙏𝘼𝘽𝙇𝙀𝘾𝙄𝘿𝙊 𝘾𝙊𝙍𝙍𝙀𝘾𝙏𝘼𝙈𝙀𝙉𝙏𝙀 𝙏𝙐𝙎 𝙍𝙀𝙂𝙇𝘼𝙎*'
 conn.sRevoke = lenguajeGB['smsSrevoke']() 
 conn.handler = handler.handler.bind(global.conn);
 conn.participantsUpdate = handler.participantsUpdate.bind(global.conn);
@@ -753,7 +750,7 @@ await fsPromises.unlink(filePath);
 
 /*function purgeSession() {
 let prekey = []
-let directorio = readdirSync("./MichiBot")
+let directorio = readdirSync("./GataBotSession")
 let filesFolderPreKeys = directorio.filter(file => {
 return file.startsWith('pre-key-')
 })
@@ -786,7 +783,7 @@ console.log(chalk.bold.cyanBright(lenguajeGB.smspurgeSessionSB2()))
 console.log(chalk.bold.red(lenguajeGB.smspurgeSessionSB3() + err))
 }}
 function purgeOldFiles() {
-const directories = ['./MichiBot/', './GataJadiBot/']
+const directories = ['./GataBotSession/', './GataJadiBot/']
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
 if (err) throw err
